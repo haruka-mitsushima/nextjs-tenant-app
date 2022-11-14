@@ -8,6 +8,7 @@ export default function ItemListPage () {
         <Head>
             <title>商品一覧</title>
         </Head>
+        <p>商品一覧</p>
         <Link href='/items/create'>新規登録</Link>
         <ItemList />
         </>

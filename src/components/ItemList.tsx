@@ -31,3 +31,9 @@ export default function ItemList () {
         </table>
     );
 };
+
+export async function getItemData(id: number){
+    const {data} = useSWR('/api/items', fetcher)
+    const items = data.map((item: {id: number, name: string}) =>{return {id: item.id, name: item.name}})
+    return  items[id-1]
+}
