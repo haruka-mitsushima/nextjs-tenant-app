@@ -47,6 +47,14 @@
       "price": "200",
       "imageURL": "http://localhost:3000/##/",
       "id": 6
+    },
+    {
+      "name": "商品7",
+      "description": "7つ目の商品です",
+      "price": "200",
+      "imageURL": "http://localhost:3000/##/",
+      "deleted": false,
+      "id": 7
     }
   ]
 }

@@ -1,23 +1,22 @@
 import Head from 'next/head';
 import {useRouter} from 'next/router'
-import {useForm, SubmitHandler,} from 'react-hook-form';
+import {useState} from 'react';
 
 type Inputs = {name: string, description: string, price: number, imageURL: string, deleted: boolean}
 
 export default function CreatePage(){
     const router = useRouter()
-    const {
-        register,
-        handleSubmit,
-        reset,
-    } = useForm<Inputs>({defaultValues: {deleted: false}});
-    const send: SubmitHandler<Inputs> = async (data) =>{
+    const [name, setName] = useState('')
+    const [description, setDescription] = useState('')
+    const [price, setPrice] = useState('')
+    const [imageURL, setImageURL] = useState('')
+    const [deleted, setDeleted] = useState(false)
+    const send = async () =>{
         await fetch('http://localhost:3000/api/items', {
             method: 'POST',
             headers: {'Content-Type': 'application/json',},
-            body: JSON.stringify(data)
+            body: JSON.stringify({name: name, description: description, price: price, imageURL: imageURL, deleted:deleted})
         }).then(()=>{router.push('http://localhost:3000/items')})
-        .then(()=>{reset();})
     }
     return (
         <>
@@ -25,25 +24,25 @@ export default function CreatePage(){
             <title>商品登録ページ</title>
         </Head>
         <h1>商品登録フォーム</h1>
-        <form method="psot" onSubmit={handleSubmit(send)} id="form" >
+        <form method="psot" onSubmit={send} id="form" >
             <label htmlFor="name">
                 商品名:
-                <input type="text" id="name" {...register("name")} />
+                <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
             </label>
             <br />
             <label htmlFor="description">
                 商品の説明:
-                <input type="text" id="description" {...register("description")} />
+                <input type="text" id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
             </label>
             <br />
             <label htmlFor="price">
                 商品の価格:
-                <input type="text" id="price" {...register("price")} />
+                <input type="text" id="price" value={price} onChange={(e) => setPrice(e.target.value)} />
             </label>
             <br />
             <label htmlFor="imageURL">
                 商品画像のURL:
-                <input type="url" id="imageURL" {...register("imageURL")} />
+                <input type="url" id="imageURL" value={imageURL} onChange={(e) => setImageURL(e.target.value)} />
             </label>
             <br />
             <input type="submit" />
