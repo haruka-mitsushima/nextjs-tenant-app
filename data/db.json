@@ -3,6 +3,13 @@
     {
       "name": "商品1",
       "id": 1
+    },
+    {
+      "name": "商品2",
+      "description": "2つ目の商品です",
+      "price": "500",
+      "imageURL": "http://localhost:3000/##/",
+      "id": 2
     }
   ]
 }
