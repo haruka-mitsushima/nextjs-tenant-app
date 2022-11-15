@@ -13,6 +13,20 @@
       "price": "500",
       "imageURL": "https://1.bp.blogspot.com/-ocRr0y766IA/XwkxkrnOvXI/AAAAAAABaCo/ux6-J7WXx58L5Ou7da9cT7pps1X2poxPwCNcBGAsYHQ/s1600/pan_pizza_toast.png",
       "id": 2
+    },
+    {
+      "name": "商品3",
+      "description": "3つ目の商品です",
+      "price": "700",
+      "imageURL": "https://1.bp.blogspot.com/-e_EAkZr1_BU/XexrDvRvEwI/AAAAAAABWlA/gh58TlEEl70LEVWeB6ZTxHcogtLUMUfTACNcBGAsYHQ/s1600/obentou_sandwich.png",
+      "id": 3
+    },
+    {
+      "name": "商品4",
+      "description": "4つ目の商品です",
+      "price": "100",
+      "imageURL": "https://1.bp.blogspot.com/-fhOM-e9SwOQ/XhwqDV3hpAI/AAAAAAABW7A/sxPBbCComYULEunH3GJ3dPSvMu3zGTRqACNcBGAsYHQ/s1600/pan_bour_bu-ru.png",
+      "id": 4
     }
   ]
 }
