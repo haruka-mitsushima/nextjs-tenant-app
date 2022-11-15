@@ -1,6 +1,7 @@
 {
   "items": [
     {
+      "deleted": false,
       "name": "商品1",
       "description": "1つ目の商品です",
       "price": "300",
@@ -8,6 +9,7 @@
       "id": 1
     },
     {
+      "deleted": false,
       "name": "商品2",
       "description": "2つ目の商品です",
       "price": "500",
@@ -15,6 +17,7 @@
       "id": 2
     },
     {
+      "deleted": false,
       "name": "商品3",
       "description": "3つ目の商品です",
       "price": "700",
@@ -22,11 +25,28 @@
       "id": 3
     },
     {
+      "deleted": false,
       "name": "商品4",
       "description": "4つ目の商品です",
       "price": "100",
       "imageURL": "https://1.bp.blogspot.com/-fhOM-e9SwOQ/XhwqDV3hpAI/AAAAAAABW7A/sxPBbCComYULEunH3GJ3dPSvMu3zGTRqACNcBGAsYHQ/s1600/pan_bour_bu-ru.png",
       "id": 4
+    },
+    {
+      "deleted": false,
+      "name": "商品5",
+      "description": "5つ目の商品です",
+      "price": "300",
+      "imageURL": "http://localhost:3000/##/",
+      "id": 5
+    },
+    {
+      "deleted": false,
+      "name": "商品6",
+      "description": "6つ目の商品です",
+      "price": "200",
+      "imageURL": "http://localhost:3000/##/",
+      "id": 6
     }
   ]
 }

@@ -1,20 +1,23 @@
 import Head from 'next/head';
+import {useRouter} from 'next/router'
 import {useForm, SubmitHandler,} from 'react-hook-form';
 
-type Inputs = {name: string, description: string, price: number, imageURL: string}
+type Inputs = {name: string, description: string, price: number, imageURL: string, deleted: boolean}
 
 export default function CreatePage(){
+    const router = useRouter()
     const {
         register,
         handleSubmit,
         reset,
-    } = useForm<Inputs>();
+    } = useForm<Inputs>({defaultValues: {deleted: false}});
     const send: SubmitHandler<Inputs> = async (data) =>{
         await fetch('http://localhost:3000/api/items', {
             method: 'POST',
             headers: {'Content-Type': 'application/json',},
             body: JSON.stringify(data)
-        }).then(()=>{reset();})
+        }).then(()=>{router.push('http://localhost:3000/items')})
+        .then(()=>{reset();})
     }
     return (
         <>
