@@ -8,8 +8,10 @@ export default function ItemPage({itemData}: any){
         <Head>
             <title>{itemData.name}</title>
         </Head>
-        <h1>{itemData.id}</h1>
-        <div>{itemData.name}</div>
+        <h1>{itemData.name}</h1>
+        <div>{itemData.price}円</div>
+        <div>{itemData.description}</div>
+        <img src={itemData.imageURL} width='200px' height='200px' />
         </>
     )
 }
@@ -17,7 +19,7 @@ export default function ItemPage({itemData}: any){
 export async function getStaticProps ({params}: {params: {id: number}}) {
         const id = params.id
         const getItems = await fetch('http://localhost:3000/api/items').then((res) => res.json());
-        const getPaths = getItems.map((item: {id: number, name: string})=>{return {id: item.id, name: item.name}})
+        const getPaths = getItems.map((item: {id: number, name: string, description: string, price: number, imageURL: string})=>{return {id: item.id, name: item.name, description: item.description, price: item.price, imageURL:item.imageURL}})
         const itemData = getPaths[id-1]
         return {
             props: {

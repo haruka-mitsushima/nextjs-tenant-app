@@ -2,13 +2,16 @@
   "items": [
     {
       "name": "商品1",
+      "description": "1つ目の商品です",
+      "price": "300",
+      "imageURL": "https://1.bp.blogspot.com/-Nbugi5PlzME/YLw8ky_ew5I/AAAAAAABd2I/h9I_KesEekEkpe7yW2qTrltqx40y8HjhgCNcBGAsYHQ/s638/sweets_maritozzo_ichigo.png",
       "id": 1
     },
     {
       "name": "商品2",
       "description": "2つ目の商品です",
       "price": "500",
-      "imageURL": "http://localhost:3000/##/",
+      "imageURL": "https://1.bp.blogspot.com/-ocRr0y766IA/XwkxkrnOvXI/AAAAAAABaCo/ux6-J7WXx58L5Ou7da9cT7pps1X2poxPwCNcBGAsYHQ/s1600/pan_pizza_toast.png",
       "id": 2
     }
   ]
