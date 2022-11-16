@@ -47,6 +47,78 @@
       "imageURL": "http://localhost:3000/##/",
       "deleted": false,
       "id": 6
+    },
+    {
+      "name": "オプション付き商品",
+      "description": "オプション付きの商品です",
+      "price": "800",
+      "imageURL": "",
+      "deleted": false,
+      "options": [
+        {
+          "id": 1,
+          "name": "",
+          "description": "",
+          "price": ""
+        }
+      ],
+      "id": 7
+    },
+    {
+      "name": "ハンバーガー",
+      "description": "プレーンなハンバーガーです",
+      "price": "300",
+      "imageURL": "https://4.bp.blogspot.com/-PNH44j6odcg/WwJaPJri5oI/AAAAAAABMK4/V_U6WfMGTtIodWf8nMxVj-75aZ-zfsa5ACLcBGAs/s400/hamburger_meat_sauce.png",
+      "deleted": false,
+      "options": [
+        {
+          "id": 1,
+          "name": "ゴマ付きパン",
+          "description": "https://2.bp.blogspot.com/-Q-Q2S303tUU/WGnPTzTOrjI/AAAAAAABA3o/lnLrXbXERfgg6yMQXEeE9iIRpnU0rsY0QCLcB/s300/hamburger_goods_bun1.png",
+          "price": "50"
+        },
+        {
+          "id": 2,
+          "name": "パティ",
+          "description": "https://3.bp.blogspot.com/-CDEJKKsppaY/WGnPUzIlwQI/AAAAAAABA34/3Sbbb4hF3x4QgWs-SDI7iyfpXQW6HeTKgCLcB/s300/hamburger_goods_hamburg.png",
+          "price": "100"
+        },
+        {
+          "id": 3,
+          "name": "ベーコン",
+          "description": "https://1.bp.blogspot.com/-3p-EFktbcbM/WGnPTbrg1_I/AAAAAAABA3c/WLuSHkEjdhsW0PZBCx_42DscEoe8QYcRwCLcB/s323/hamburger_goods_bacon.png",
+          "price": "100"
+        }
+      ],
+      "id": 8
+    },
+    {
+      "name": "ショートケーキ",
+      "description": "1/4カットのショートケーキです",
+      "price": "500",
+      "imageURL": "https://3.bp.blogspot.com/-ZRkAB2UIqe0/UgSMXRltjEI/AAAAAAAAXCc/O12xepeoB4Y/s400/sweets_shortcake.png",
+      "deleted": false,
+      "options": [
+        {
+          "id": 1,
+          "name": "サイズに変更",
+          "description": "ホールサイズに変更します",
+          "price": "2000"
+        },
+        {
+          "id": 2,
+          "name": "",
+          "description": "",
+          "price": ""
+        },
+        {
+          "id": 3,
+          "name": "",
+          "description": "",
+          "price": ""
+        }
+      ],
+      "id": 9
     }
   ]
 }

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import {useRouter} from 'next/router'
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function ItemPage({itemData}: any){
     const router = useRouter()
@@ -9,8 +9,8 @@ export default function ItemPage({itemData}: any){
     const [price, setPrice] = useState(itemData.price)
     const [imageURL, setImageURL] = useState(itemData.imageURL)
     const [deleted, setDeleted] = useState(itemData.deleted)
-    const send = async () =>{
-        (e: Event) => e.preventDefault()
+    const send = async (e: React.FormEvent<HTMLFormElement>) =>{
+        e.preventDefault()
         await fetch(`http://localhost:3000/api/items/${itemData.id}`, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json',},
@@ -34,8 +34,22 @@ export default function ItemPage({itemData}: any){
         <div>{itemData.price}円</div>
         <div>{itemData.description}</div>
         <img src={itemData.imageURL} width='200px' height='200px' />
-        <h2>更新フォーム</h2>
-        <form method='PUT' id='update'>
+        <h2>オプション</h2>
+        <div>オプション1</div>
+        <div>{itemData.options[0].name}</div>
+        <div>{itemData.options[0].price}円</div>
+        <div>{itemData.options[0].description}</div>
+        <div>オプション2</div>
+        <div>{itemData.options[1].name}</div>
+        <div>{itemData.options[1].price}円</div>
+        <div>{itemData.options[1].description}</div>
+        <div>オプション3</div>
+        <div>{itemData.options[2].name}</div>
+        <div>{itemData.options[2].price}円</div>
+        <div>{itemData.options[2].description}</div>
+        <hr />
+        <h3>更新フォーム</h3>
+        <form method='PUT' id='update' onSubmit={send}>
         <label htmlFor="name">
                 商品名:
                 <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
@@ -56,11 +70,25 @@ export default function ItemPage({itemData}: any){
                 <input type="url" id="imageURL" value={imageURL} onChange={(e) => setImageURL(e.target.value)} />
             </label>
             <br />
-            <button onClick={send}>更新</button>
+            <button type='submit'>更新</button>
         </form>
         </>
     )
 }
+
+// export function Option ({itemData}: any){
+//     const roop = () => {for (const option of itemData.options){
+//         return(
+//             <>
+//             <div>オプション{option.id}</div>
+//             <div>{option.name}</div>
+//             <div>{option.price}円</div>
+//             <div>{option.description}</div>
+//             </>
+//         )}
+//     }
+//     return roop
+// }
 
 export async function getStaticProps ({params}: {params: {id: number}}) {
         const id = params.id
