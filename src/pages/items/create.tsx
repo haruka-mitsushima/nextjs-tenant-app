@@ -46,7 +46,7 @@ export default function CreatePage(){
             <br />
             <label htmlFor="price">
                 商品の価格:
-                <input type="text" id="price" value={price} onChange={(e) => setPrice(e.target.value)} />
+                <input type="number" id="price" value={price} onChange={(e) => setPrice(e.target.value)} />
             </label>
             <br />
             <label htmlFor="imageURL">
