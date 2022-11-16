@@ -33,28 +33,12 @@
       "id": 4
     },
     {
-      "deleted": false,
       "name": "商品5",
       "description": "5つ目の商品です",
       "price": "300",
       "imageURL": "http://localhost:3000/##/",
+      "deleted": false,
       "id": 5
-    },
-    {
-      "deleted": false,
-      "name": "商品6",
-      "description": "6つ目の商品です",
-      "price": "200",
-      "imageURL": "http://localhost:3000/##/",
-      "id": 6
-    },
-    {
-      "name": "商品7",
-      "description": "7つ目の商品です",
-      "price": "200",
-      "imageURL": "http://localhost:3000/##/",
-      "deleted": false,
-      "id": 7
     }
   ]
 }

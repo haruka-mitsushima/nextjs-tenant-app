@@ -12,11 +12,20 @@ export default function CreatePage(){
     const [imageURL, setImageURL] = useState('')
     const [deleted, setDeleted] = useState(false)
     const send = async () =>{
+        (e: Event) => e.preventDefault()
         await fetch('http://localhost:3000/api/items', {
             method: 'POST',
             headers: {'Content-Type': 'application/json',},
             body: JSON.stringify({name: name, description: description, price: price, imageURL: imageURL, deleted:deleted})
-        }).then(()=>{router.push('http://localhost:3000/items')})
+        })
+        .then((res) => res.json())
+        .then((data)=>{
+            console.log('Success:', data);
+            router.push('/items')
+        })
+        .catch((error) => {
+            console.error('Error:', error)
+        })
     }
     return (
         <>
@@ -24,7 +33,7 @@ export default function CreatePage(){
             <title>商品登録ページ</title>
         </Head>
         <h1>商品登録フォーム</h1>
-        <form method="psot" onSubmit={send} id="form" >
+        <form method="psot" id="form" >
             <label htmlFor="name">
                 商品名:
                 <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
@@ -45,7 +54,7 @@ export default function CreatePage(){
                 <input type="url" id="imageURL" value={imageURL} onChange={(e) => setImageURL(e.target.value)} />
             </label>
             <br />
-            <input type="submit" />
+            <button onClick={send}>送信</button>
         </form>
         </>
     )

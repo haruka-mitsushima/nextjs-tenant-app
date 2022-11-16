@@ -1,6 +1,4 @@
 import Head from 'next/head';
-// import { getItemData } from 'components/ItemList';
-
 
 export default function ItemPage({itemData}: any){
     return(
@@ -18,9 +16,7 @@ export default function ItemPage({itemData}: any){
 
 export async function getStaticProps ({params}: {params: {id: number}}) {
         const id = params.id
-        const getItems = await fetch('http://localhost:3000/api/items').then((res) => res.json());
-        const getPaths = getItems.map((item: {id: number, name: string, description: string, price: number, imageURL: string})=>{return {id: item.id, name: item.name, description: item.description, price: item.price, imageURL:item.imageURL}})
-        const itemData = getPaths[id-1]
+        const itemData = await fetch(`http://localhost:3000/api/items/${id}`).then((res) => res.json());
         return {
             props: {
                 itemData,
@@ -36,27 +32,3 @@ export async function getStaticPaths () {
             fallback: false,
         };
     }
-
-// export async function getStaticProps ({params}: {params: {id: number}}) {
-//     const itemData = await getItemData(params.id)
-//     return {
-//         props: {
-//             itemData
-//         }
-//     };
-// }
-
-// export async function getStaticPaths () {
-//     return {
-//         paths: [{params: {id: '1'}}],
-//         fallback: false,
-//     };
-// }
-
-// export async function getStaticPaths () {
-//     const items = await getItemsFromAPI()
-//     return {
-//         paths: [{params: {id: '1'}}],
-//         fallback: {'/api/items': items},
-//     };
-// }
