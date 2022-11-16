@@ -3,71 +3,119 @@
     {
       "name": "更新1",
       "description": "更新版1つ目の商品です",
-      "price": "300",
+      "price": 300,
       "imageURL": "https://1.bp.blogspot.com/-Nbugi5PlzME/YLw8ky_ew5I/AAAAAAABd2I/h9I_KesEekEkpe7yW2qTrltqx40y8HjhgCNcBGAsYHQ/s638/sweets_maritozzo_ichigo.png",
-      "deleted": false,
-      "id": 1
-    },
-    {
-      "name": "商品2(更新しました)",
-      "description": "更新版2つ目の商品です",
-      "price": "400",
-      "imageURL": "https://1.bp.blogspot.com/-ocRr0y766IA/XwkxkrnOvXI/AAAAAAABaCo/ux6-J7WXx58L5Ou7da9cT7pps1X2poxPwCNcBGAsYHQ/s1600/pan_pizza_toast.png",
-      "deleted": false,
-      "id": 2
-    },
-    {
-      "deleted": false,
-      "name": "商品3",
-      "description": "3つ目の商品です",
-      "price": "700",
-      "imageURL": "https://1.bp.blogspot.com/-e_EAkZr1_BU/XexrDvRvEwI/AAAAAAABWlA/gh58TlEEl70LEVWeB6ZTxHcogtLUMUfTACNcBGAsYHQ/s1600/obentou_sandwich.png",
-      "id": 3
-    },
-    {
-      "deleted": false,
-      "name": "商品4",
-      "description": "4つ目の商品です",
-      "price": "100",
-      "imageURL": "https://1.bp.blogspot.com/-fhOM-e9SwOQ/XhwqDV3hpAI/AAAAAAABW7A/sxPBbCComYULEunH3GJ3dPSvMu3zGTRqACNcBGAsYHQ/s1600/pan_bour_bu-ru.png",
-      "id": 4
-    },
-    {
-      "name": "商品5",
-      "description": "5つ目の商品です",
-      "price": "300",
-      "imageURL": "http://localhost:3000/##/",
-      "deleted": false,
-      "id": 5
-    },
-    {
-      "name": "商品6",
-      "description": "6つ目の商品です",
-      "price": "100",
-      "imageURL": "http://localhost:3000/##/",
-      "deleted": false,
-      "id": 6
-    },
-    {
-      "name": "オプション付き商品",
-      "description": "オプション付きの商品です",
-      "price": "800",
-      "imageURL": "",
       "deleted": false,
       "options": [
         {
           "id": 1,
           "name": "",
           "description": "",
-          "price": ""
+          "price": 0
+        },
+        {
+          "id": 2,
+          "name": "",
+          "description": "",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "name": "",
+          "description": "",
+          "price": 0
         }
       ],
-      "id": 7
+      "id": 1
+    },
+    {
+      "name": "商品2(更新しました)",
+      "description": "更新版2つ目の商品です",
+      "price": 400,
+      "imageURL": "https://1.bp.blogspot.com/-ocRr0y766IA/XwkxkrnOvXI/AAAAAAABaCo/ux6-J7WXx58L5Ou7da9cT7pps1X2poxPwCNcBGAsYHQ/s1600/pan_pizza_toast.png",
+      "deleted": false,
+      "options": [
+        {
+          "id": 1,
+          "name": "チーズ増量",
+          "description": "チーズが増えます",
+          "price": 100
+        },
+        {
+          "id": 2,
+          "name": "",
+          "description": "",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "name": "",
+          "description": "",
+          "price": 0
+        }
+      ],
+      "id": 2
+    },
+    {
+      "deleted": false,
+      "name": "商品3",
+      "description": "3つ目の商品です",
+      "price": 700,
+      "imageURL": "https://1.bp.blogspot.com/-e_EAkZr1_BU/XexrDvRvEwI/AAAAAAABWlA/gh58TlEEl70LEVWeB6ZTxHcogtLUMUfTACNcBGAsYHQ/s1600/obentou_sandwich.png",
+      "id": 3,
+      "options": [
+        {
+          "id": 1,
+          "name": "",
+          "description": "",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "name": "",
+          "description": "",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "name": "",
+          "description": "",
+          "price": 0
+        }
+      ]
+    },
+    {
+      "deleted": false,
+      "name": "商品4",
+      "description": "4つ目の商品です",
+      "price": 100,
+      "imageURL": "https://1.bp.blogspot.com/-fhOM-e9SwOQ/XhwqDV3hpAI/AAAAAAABW7A/sxPBbCComYULEunH3GJ3dPSvMu3zGTRqACNcBGAsYHQ/s1600/pan_bour_bu-ru.png",
+      "id": 4,
+      "options": [
+        {
+          "id": 1,
+          "name": "",
+          "description": "",
+          "price": 0
+        },
+        {
+          "id": 2,
+          "name": "",
+          "description": "",
+          "price": 0
+        },
+        {
+          "id": 3,
+          "name": "",
+          "description": "",
+          "price": 0
+        }
+      ]
     },
     {
       "name": "ハンバーガー",
       "description": "プレーンなハンバーガーです",
-      "price": "300",
+      "price": 300,
       "imageURL": "https://4.bp.blogspot.com/-PNH44j6odcg/WwJaPJri5oI/AAAAAAABMK4/V_U6WfMGTtIodWf8nMxVj-75aZ-zfsa5ACLcBGAs/s400/hamburger_meat_sauce.png",
       "deleted": false,
       "options": [
@@ -75,27 +123,27 @@
           "id": 1,
           "name": "ゴマ付きパン",
           "description": "https://2.bp.blogspot.com/-Q-Q2S303tUU/WGnPTzTOrjI/AAAAAAABA3o/lnLrXbXERfgg6yMQXEeE9iIRpnU0rsY0QCLcB/s300/hamburger_goods_bun1.png",
-          "price": "50"
+          "price": 50
         },
         {
           "id": 2,
           "name": "パティ",
           "description": "https://3.bp.blogspot.com/-CDEJKKsppaY/WGnPUzIlwQI/AAAAAAABA34/3Sbbb4hF3x4QgWs-SDI7iyfpXQW6HeTKgCLcB/s300/hamburger_goods_hamburg.png",
-          "price": "100"
+          "price": 100
         },
         {
           "id": 3,
           "name": "ベーコン",
           "description": "https://1.bp.blogspot.com/-3p-EFktbcbM/WGnPTbrg1_I/AAAAAAABA3c/WLuSHkEjdhsW0PZBCx_42DscEoe8QYcRwCLcB/s323/hamburger_goods_bacon.png",
-          "price": "100"
+          "price": 100
         }
       ],
-      "id": 8
+      "id": 5
     },
     {
       "name": "ショートケーキ",
       "description": "1/4カットのショートケーキです",
-      "price": "500",
+      "price": 500,
       "imageURL": "https://3.bp.blogspot.com/-ZRkAB2UIqe0/UgSMXRltjEI/AAAAAAAAXCc/O12xepeoB4Y/s400/sweets_shortcake.png",
       "deleted": false,
       "options": [
@@ -103,22 +151,22 @@
           "id": 1,
           "name": "サイズに変更",
           "description": "ホールサイズに変更します",
-          "price": "2000"
+          "price": 2000
         },
         {
           "id": 2,
           "name": "",
           "description": "",
-          "price": ""
+          "price": 0
         },
         {
           "id": 3,
           "name": "",
           "description": "",
-          "price": ""
+          "price": 0
         }
       ],
-      "id": 9
+      "id": 6
     }
   ]
 }

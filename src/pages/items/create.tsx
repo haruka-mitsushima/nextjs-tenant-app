@@ -6,21 +6,21 @@ export default function CreatePage(){
     const router = useRouter()
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
-    const [price, setPrice] = useState('')
+    const [price, setPrice] = useState(0)
     const [imageURL, setImageURL] = useState('')
     const [deleted, setDeleted] = useState(false)
     const [opId1, setOpId1] = useState(1)
     const [opName1, setOpName1] = useState('')
     const [opDescription1, setOpDescription1] = useState('')
-    const [opPrice1, setOpPrice1] = useState('')
+    const [opPrice1, setOpPrice1] = useState(0)
     const [opId2, setOpId2] = useState(2)
     const [opName2, setOpName2] = useState('')
     const [opDescription2, setOpDescription2] = useState('')
-    const [opPrice2, setOpPrice2] = useState('')
+    const [opPrice2, setOpPrice2] = useState(0)
     const [opId3, setOpId3] = useState(3)
     const [opName3, setOpName3] = useState('')
     const [opDescription3, setOpDescription3] = useState('')
-    const [opPrice3, setOpPrice3] = useState('')
+    const [opPrice3, setOpPrice3] = useState(0)
     const itemData = {name: name, description: description, price: price, imageURL: imageURL, deleted:deleted,
                     options: [{id: opId1, name: opName1, description: opDescription1, price: opPrice1},
                         {id: opId2, name: opName2, description: opDescription2, price: opPrice2},
@@ -60,7 +60,7 @@ export default function CreatePage(){
             <br />
             <label htmlFor="price">
                 商品の価格:
-                <input type="number" id="price" value={price} onChange={(e) => setPrice(e.target.value)} />
+                <input type="number" id="price" value={price} onChange={(e) => setPrice(Number(e.target.value))} />
             </label>
             <br />
             <label htmlFor="imageURL">
@@ -81,7 +81,7 @@ export default function CreatePage(){
             <br />
             <label htmlFor='opPrice'>
                 オプションの価格:
-                <input type="number" id="opPrice1" value={opPrice1} onChange={(e) => setOpPrice1(e.target.value)} />
+                <input type="number" id="opPrice1" value={opPrice1} onChange={(e) => setOpPrice1(Number(e.target.value))} />
             </label>
             <br />
             <br />
@@ -98,7 +98,7 @@ export default function CreatePage(){
             <br />
             <label htmlFor='opPrice'>
                 オプションの価格:
-                <input type="number" id="opPrice2" value={opPrice2} onChange={(e) => setOpPrice2(e.target.value)} />
+                <input type="number" id="opPrice2" value={opPrice2} onChange={(e) => setOpPrice2(Number(e.target.value))} />
             </label>
             <br />
             <br />
@@ -115,7 +115,7 @@ export default function CreatePage(){
             <br />
             <label htmlFor='opPrice'>
                 オプションの価格:
-                <input type="number" id="opPrice3" value={opPrice3} onChange={(e) => setOpPrice3(e.target.value)} />
+                <input type="number" id="opPrice3" value={opPrice3} onChange={(e) => setOpPrice3(Number(e.target.value))} />
             </label>
             <br />
             <button type='submit'>送信</button>
