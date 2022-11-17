@@ -30,7 +30,7 @@
     },
     {
       "name": "商品2(更新しました)",
-      "description": "更新版2つ目の商品です",
+      "description": "2つ目の商品です",
       "price": 400,
       "imageURL": "https://1.bp.blogspot.com/-ocRr0y766IA/XwkxkrnOvXI/AAAAAAABaCo/ux6-J7WXx58L5Ou7da9cT7pps1X2poxPwCNcBGAsYHQ/s1600/pan_pizza_toast.png",
       "deleted": false,
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "deleted": false,
+      "deleted": true,
       "name": "商品4",
       "description": "4つ目の商品です",
       "price": 100,
