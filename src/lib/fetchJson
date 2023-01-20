@@ -1,0 +1,10 @@
+export default async function fetchJson<JSON = unknown>(
+    input : RequestInfo, 
+    init?: RequestInit
+) {
+    const respnse = await fetch(input, init)
+    const data = await respnse.json()
+    if(respnse.ok){
+        return data
+    }
+}
