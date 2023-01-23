@@ -33,10 +33,10 @@ export default function ItemList() {
           })
           .map((item: Item) => {
             return (
-              <tr key="tr1">
-                <td>{item.id}</td>
-                <td>{item.name}</td>
-                <td>{item.description}</td>
+              <tr key={item.id}>
+                <td key={item.id}>{item.id}</td>
+                <td key={item.name}>{item.name}</td>
+                <td key={item.description}>{item.description}</td>
                 <td>
                   <button
                     onClick={async () => {

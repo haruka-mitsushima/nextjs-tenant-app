@@ -167,6 +167,14 @@
         }
       ],
       "id": 6
+    },
+    {
+      "name": "パン",
+      "description": "パンです",
+      "price": 500,
+      "imageURL": "test.com",
+      "deleted": false,
+      "id": 7
     }
   ]
 }
