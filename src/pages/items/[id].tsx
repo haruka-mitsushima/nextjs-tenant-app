@@ -77,8 +77,8 @@ export default function ItemPage({
   };
   const send = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await fetch(`http://localhost:3000/api/items/${itemData.id}`, {
-      method: 'PUT',
+    await fetch(`http://localhost:3005/api/items/${itemData.id}`, {
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(info),
     })
@@ -152,7 +152,7 @@ export default function ItemPage({
         <label htmlFor="price">
           商品の価格:
           <input
-            type="number"
+            type="string"
             id="price"
             value={price}
             onChange={(e) => setPrice(Number(e.target.value))}
@@ -162,7 +162,7 @@ export default function ItemPage({
         <label htmlFor="imageURL">
           商品画像のURL:
           <input
-            type="url"
+            type="string"
             id="imageURL"
             value={imageURL}
             onChange={(e) => setImageURL(e.target.value)}
@@ -292,7 +292,7 @@ export async function getStaticProps({
 }) {
   const id = params.id;
   const itemData = await fetch(
-    `http://localhost:3000/api/items/${id}`
+    `http://localhost:3005/api/items/${id}`
   ).then((res) => res.json());
   return {
     props: {
@@ -303,7 +303,7 @@ export async function getStaticProps({
 
 export async function getStaticPaths() {
   const getItems = await fetch(
-    'http://localhost:3000/api/items'
+    'http://localhost:3005/api/items'
   ).then((res) => res.json());
   const getPaths = getItems.map((item: { id: number }) => {
     return { params: { id: item.id.toString() } };
