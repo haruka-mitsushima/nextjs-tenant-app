@@ -11,7 +11,10 @@ type Item = {
 
 export default function ItemList() {
   const { mutate } = useSWRConfig();
-  const { data, error } = useSWR('/api/items', fetcher);
+  const { data, error } = useSWR(
+    'http://localhost:3005/api/items',
+    fetcher
+  );
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
   return (
@@ -42,7 +45,7 @@ export default function ItemList() {
                     onClick={async () => {
                       const info = { deleted: true };
                       await fetch(
-                        `http://localhost:3000/api/items/${item.id}`,
+                        `http://localhost:3005/api/items/delete/${item.id}`,
                         {
                           method: 'PATCH',
                           headers: {
@@ -51,7 +54,7 @@ export default function ItemList() {
                           body: JSON.stringify(info),
                         }
                       );
-                      mutate(`/api/items`);
+                      mutate(`http://localhost:3005/api/items`);
                     }}
                   >
                     削除
